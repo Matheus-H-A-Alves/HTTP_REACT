@@ -20,6 +20,23 @@ function App() {
 
     }
     getData();
+    // 2 - Enviando dados
+    <div className='add-product'>
+      <form>
+        <label>
+          <span>Nome:</span>
+          <input type='text' value={name} onChange={(e) => setName(e.target.value)} />
+        </label>
+        <label>
+          <span>Preço:</span>
+          <input type='text' value={price} onChange={(e) => setPrice(e.target.value)} />
+        </label>
+        <label input type='submit' value='Enviar'></label>
+        
+        
+
+      </form>
+    </div>
 
     
 
