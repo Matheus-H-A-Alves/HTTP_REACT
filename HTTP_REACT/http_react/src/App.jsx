@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import { useFetch } from './hooks/useFetch';
 const url = "http://localhost:3000/products"
 import './App.css'
 
@@ -6,19 +7,30 @@ function App() {
   // 1. Resgatando dados
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
 
-    async function getData() {
+  // 4- custom hook
+  // pode ser renomeado para items para melhor compreensão,
+  //  já que o nome data é genérico e não indica claramente
+  //  o que está sendo resgatado.
 
-      const res = await fetch(url)
+  // O uso do custom hook useFetch torna o código mais limpo e reutilizável,
+  //  pois encapsula a lógica de busca de dados e pode ser facilmente
+  //  reutilizado em outros componentes ou partes da aplicação.
+  const {data: items} = useFetch(url);
 
-      const data = await res.json()
-      setProducts(data);
+  // useEffect(() => {
 
-    };
-    getData();
+  //   async function getData() {
+
+  //     const res = await fetch(url)
+
+  //     const data = await res.json()
+  //     setProducts(data);
+
+  //   };
+  //   getData();
    
-  },[]);
+  // },[]);
 
   const [name, setName] = useState("");
   const [price,setPrice] = useState("");
@@ -53,7 +65,10 @@ function App() {
       <h1>HTTP em React</h1>
       {/* 1 - resgate de dados */}
       <ul>
-        {products.map((product) =>(
+        {/* Validação para garantir que items não seja null ou undefined
+        pois caso seja, não haverá dados para serem exibidos */}
+        {items && 
+        items.map((product) =>(
           <li key={product.id}>
             {product.name} 
            - R${product.price}
