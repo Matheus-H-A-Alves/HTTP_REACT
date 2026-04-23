@@ -1,34 +1,55 @@
 {
-    "products" : [
-        {
-            "name": "capa de chuva",
-            "price": "50,50",
-            "id" : "5"
-        },
-        {
-            "name": "teclado",
-            "price": "110",
-            "id": "6"
-        },
-        {
-            "name": "cadeira",
-            "price": "200",
-            "id": "7"
-        },
-        {
-            "name": "gabinete",
-            "price": "90",
-            "id": "8"
-        },
-        {
-            "name": "placa de video",
-            "price": "2500",
-            "id": "9"
-        },
-        {
-            "name": "mouse",
-            "price": "50",
-            "id": "10"
-        }
-    ]
+  "products": [
+    {
+      "name": "capa de chuva",
+      "price": "50,50",
+      "id": "5"
+    },
+    {
+      "name": "teclado",
+      "price": "110",
+      "id": "6"
+    },
+    {
+      "name": "cadeira",
+      "price": "200",
+      "id": "7"
+    },
+    {
+      "name": "gabinete",
+      "price": "90",
+      "id": "8"
+    },
+    {
+      "name": "placa de video",
+      "price": "2500",
+      "id": "9"
+    },
+    {
+      "name": "mouse",
+      "price": "50",
+      "id": "10"
+    },
+    {
+      "name": "jose",
+      "price": "30",
+      "id": "v_dRqZbiBko"
+    },
+    {
+      "name": "jose",
+      "price": "35",
+      "id": "1Oq19hO108Q"
+    },
+    {
+      "name": "Maria",
+      "price": "55",
+      "id": "cOHVgQpkdig"
+    },
+    {
+      "name": "Maria Jose",
+      "price": "550",
+      "id": "09z2XE5VbF4"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
